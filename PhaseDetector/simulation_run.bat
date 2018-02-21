@@ -1,0 +1,1 @@
+modelsim -do test_script.tcl
