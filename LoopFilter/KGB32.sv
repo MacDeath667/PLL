@@ -9,10 +9,10 @@ module KGB32
 	output wire triggeredMin_o
 );
 	
-	wire [6:0] maxValue;
+	reg [6:0] maxValue;
 	assign maxValue = 7'd32;
 	
-	wire [6:0] minValue;
+	reg [6:0] minValue;
 	assign minValue = ~maxValue + 7'd1;
 	
 	wire loadNewValue;

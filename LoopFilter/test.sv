@@ -51,9 +51,9 @@ module test;
     end
     
     always begin
-        #0.15us;
+        #0.20us;
         signalB_i = !signalB_i;
-        #0.1us;
+        #0.05us;
     end
     
 endmodule

@@ -9,10 +9,10 @@ module KGB8
 	output wire triggeredMin_o
 );
 	
-	wire [4:0] maxValue;
+	reg [4:0] maxValue;
 	assign maxValue = 5'd8;
 	
-	wire [4:0] minValue;
+	reg [4:0] minValue;
 	assign minValue = ~maxValue + 5'd1;
 	
 	wire loadNewValue;

@@ -1,6 +1,8 @@
 module ReversiveCounter 
 #(
 	parameter WIDTH = 8
+	//parameter maxCount = maxValue
+	//parameter minCount =
 )
 (
 	input wire reset_i,
@@ -36,6 +38,7 @@ module ReversiveCounter
 				value <= value + incValue;
 			else if (!increment_i && decrement_i)
 				value <= value + decValue;
+			
 		end
 		
 	end
