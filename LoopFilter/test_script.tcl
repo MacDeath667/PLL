@@ -13,12 +13,15 @@ vsim -t 10ps -voptargs="+acc" test
 add wave -divider "Test signals"
 add wave /test/reset_i
 add wave /test/clk_i
-add wave /test/signalA_i
-add wave /test/signalB_i
+add wave /test/sig13
+add wave /test/sig2
+add wave /test/switch
 add wave /test/forwarding
 add wave /test/slowing
 add wave /test/positiveShift_o
 add wave /test/negativeShift_o
+add wave /test/reachedMaxValue
+add wave /test/reachedMinValue
 
 add wave -divider "KGBM signals"
 add wave /test/LoopDUT/kgbM/triggeredMax_o

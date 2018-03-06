@@ -26,8 +26,8 @@ module LoopFilter
 	(
 		.reset_i(reset_i),
 		.clk_i(clk_i),
-		.increment_i(resetValueIncrement),
-		.decrement_i(resetValueDecrement),
+		.increment_i(resetValueIncrement && (resetValue != 8)),
+		.decrement_i(resetValueDecrement && (resetValue != 8'hF8)),
 		.loadNewValue_i('0),
 		.loadingValue_i('0),
 		.value_o(resetValue)
