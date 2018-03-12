@@ -1,10 +1,10 @@
 module DPKD
 (
-	input wire reset_i,
-	input wire clk_i,
-	input wire positiveShift_i,
-	input wire negativeShift_i,
-	output reg outSignal_o
+	input logic reset_i,
+	input logic clk_i,
+	input logic positiveShift_i,
+	input logic negativeShift_i,
+	output logic outSignal_o
 );
 	
 	Divider divider

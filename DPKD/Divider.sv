@@ -4,21 +4,21 @@ module Divider
 
 )
 (
-	input wire reset_i,
-	input wire clk_i,
-	input wire positiveShift_i,
-	input wire negativeShift_i,
-	input wire [WIDTH - 1:0] initValue_i,
-	output wire output_o
+	input logic reset_i,
+	input logic clk_i,
+	input logic positiveShift_i,
+	input logic negativeShift_i,
+	input logic [WIDTH - 1:0] initValue_i,
+	output logic output_o
 );
 
-	reg outSignal_o;
+	logic outSignal_o;
 	logic [WIDTH - 1:0] counter;
 	assign counter = 8'd0;
 	//wire [WIDTH - 1:0] incValue;
 	//assign incValue = 1;
 	
-	reg value;
+	logic value;
 	
 	//wire [WIDTH - 1:0] decValue;
 	//assign decValue = '1;
@@ -30,6 +30,7 @@ module Divider
 	begin
 	
 		if (!reset_i)
+			output_o <= '0;
 			value <= '0;
 		else if (clk_i)
 		begin
