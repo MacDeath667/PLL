@@ -1,7 +1,7 @@
 transcript on
 vlib work
 
-vlog -sv ./Devider.sv
+vlog -sv ./Divider.sv
 vlog -sv ./test.sv
 
 vsim -t 10ps -voptargs="+acc" test
@@ -14,7 +14,7 @@ add wave /test/negativeShift_i
 
 add wave -divider "Out signal"
 
-add wave -radix decimal /test/DPKD_DUT/output_o
+add wave -radix decimal /test/DPKD_DUT/out
 
 
 add wave -radix decimal /test/DPKD_DUT/counter

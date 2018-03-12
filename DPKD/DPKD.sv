@@ -14,7 +14,7 @@ module DPKD
 		.positiveShift_i(positiveShift_i),
 		.negativeShift_i(negativeShift_i),
 		.initValue_i(8'd100),
-		.output_o(outSignal_o)
+		.out(outSignal_o)
 	);
 	
 	

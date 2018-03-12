@@ -9,35 +9,28 @@ module Divider
 	input logic positiveShift_i,
 	input logic negativeShift_i,
 	input logic [WIDTH - 1:0] initValue_i,
-	output logic output_o
+	output logic out
 );
 
 	logic outSignal_o;
 	logic [WIDTH - 1:0] counter;
-	assign counter = 8'd0;
-	//wire [WIDTH - 1:0] incValue;
-	//assign incValue = 1;
-	
 	logic value;
-	
-	//wire [WIDTH - 1:0] decValue;
-	//assign decValue = '1;
-	//----------------------------------------------
-	//----------------------------------------------
-	assign outSignal_o = output_o;
 	
 	always_ff @(posedge clk_i or negedge reset_i)
 	begin
 	
 		if (!reset_i)
-			output_o <= '0;
-			value <= '0;
+			begin
+				out <= '0;
+				value <= '0;
+				counter <= 'd0;
+			end
 		else if (clk_i)
 		begin
 			
 			counter <= counter + 1'd1;
 			if (counter == value)
-			output_o <= !output_o;
+			out <= !out;
 			
 		end
 		

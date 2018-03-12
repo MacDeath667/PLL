@@ -1,10 +1,10 @@
 module test;
     
-   reg reset_i;
-   reg clk_i;
-   reg positiveShift_i;
-   reg negativeShift_i;
-   wire output_o;
+   logic reset_i;
+   logic clk_i;
+   logic positiveShift_i;
+   logic negativeShift_i;
+   logic out;
 
     
    Devider DPKD_DUT
@@ -13,7 +13,7 @@ module test;
         .clk_i(clk_i),
         .positiveShift_i(positiveShift_i),
         .negativeShift_i(negativeShift_i),
-        .output_o(output_o)
+        .out(out)
     ); 
     
     
